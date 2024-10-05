@@ -1039,9 +1039,9 @@ def eig_si(
     lam : ndarray
         Ideally, `p` converged eigenvalues.
     phi : ndarray
-        Ideally, p converged eigenvectors.
+        Ideally, `p` converged eigenvectors.
     phiv : ndarray
-        First p columns are `phi`, others are leftover iteration
+        First `p` columns are `phi`, others are leftover iteration
         vectors which may be a good starting point for a second call.
 
     Notes
@@ -1397,9 +1397,9 @@ def reorder_dict(ordered_dict, keys, where):
     ...                    ('two', 2),
     ...                    ('three', 3)))
     >>> dct
-    OrderedDict([('one', 1), ('two', 2), ('three', 3)])
+    OrderedDict({'one': 1, 'two': 2, 'three': 3})
     >>> reorder_dict(dct, ['three', 'two'], 'first')
-    OrderedDict([('three', 3), ('two', 2), ('one', 1)])
+    OrderedDict({'three': 3, 'two': 2, 'one': 1})
     """
 
     def reorder_keys(all_keys, keys, where):
